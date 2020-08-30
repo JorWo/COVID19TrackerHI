@@ -28,7 +28,7 @@
                         var mydata = JSON.parse(this.responseText);
 
                         for (i=0;i<Object.keys(mydata).length;i++) {
-                            distances.push(calcGeoDistance(position.latitude,position.longitude,covid[i].lat,covid[i].long,'mi'));
+                            distances.push(calcGeoDistance(position.latitude,position.longitude,mydata[i].lat,mydata[i].long,'mi'));
                     }
                 }   
             }

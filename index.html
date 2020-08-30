@@ -11,7 +11,8 @@
         
         <script>
             var distance;
-      
+            var distances = [];
+
             function setup() {
                 if (geoCheck() == false) {
                     document.getElementById('text1').innerHTML = "Your device's GPS is disabled";
@@ -20,22 +21,21 @@
                 enableHighAccuracy: true;
             }
             
-            var covid = JSON.parse("covidHawaiiData.json");
-            var distances = [];
+            var xmlhttp = new XMLHttpRequest();
+            xmlhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                var mydata = JSON.parse(this.responseText);
 
-            function positionPing(position) {
-                for (i=0;i<covid.length();i++) {
+                for (i=0;i<mydata.length();i++) {
                     distances.push(calcGeoDistance(position.latitude,position.longitude,covid[i].lat,covid[i].long,'mi'));
                 }
-                document.getElementById('text1').innerHTML = distances;
-        
-                if (distance <= 0.008) {
-                    document.getElementById('text1').innerHTML = "X marks the spot!";
-                }
-                else {
-                    document.getElementById('text1').innerHTML = "You are " + distance.toFixed(5) +" mile(s) away";
-                }
-             }
+            }
+            
+            document.getElementById('text1').innerHTML = distances;
+
+            function positionPing(position) {
+                
+            }
         </script>
     </body>
 </html>

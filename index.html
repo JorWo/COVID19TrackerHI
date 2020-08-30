@@ -35,7 +35,7 @@
             xmlhttp.open("GET","covidHawaiiData.json",true);
             xmlhttp.send();
 
-            document.getElementById('text1').innerHTML = distances;    
+            document.getElementById('text1').innerHTML = Math.min(distances);    
             }
         </script>
     </body>

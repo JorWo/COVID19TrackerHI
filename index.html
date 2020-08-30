@@ -19,24 +19,23 @@
                 }
                 intervalCurrentPosition(positionPing,1000);
                 enableHighAccuracy: true;
-            
-            var xmlhttp = new XMLHttpRequest();
-            xmlhttp.onreadystatechange = function() {
-                if (this.readyState == 4 && this.status == 200) {
-                    var mydata = JSON.parse(this.responseText);
+            }
 
-                    for (i=0;i<Object.keys(mydata).length;i++) {
-                        distances.push(calcGeoDistance(position.latitude,position.longitude,covid[i].lat,covid[i].long,'mi'));
+            function positionPing(position) {
+                var xmlhttp = new XMLHttpRequest();
+                xmlhttp.onreadystatechange = function() {
+                    if (this.readyState == 4 && this.status == 200) {
+                        var mydata = JSON.parse(this.responseText);
+
+                        for (i=0;i<Object.keys(mydata).length;i++) {
+                            distances.push(calcGeoDistance(position.latitude,position.longitude,covid[i].lat,covid[i].long,'mi'));
                     }
-            }   
+                }   
             }
             xmlhttp.open("GET","covidHawaiiData.json",true);
             xmlhttp.send();
-            }
-            document.getElementById('text1').innerHTML = distances;
 
-            function positionPing(position) {
-                
+            document.getElementById('text1').innerHTML = distances;    
             }
         </script>
     </body>

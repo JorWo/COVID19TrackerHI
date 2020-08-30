@@ -1,0 +1,163 @@
+[
+    {
+        "zipCode": "96701",
+        "city": "Aiea",
+        "lat": 21.4,
+        "long": -157.92,
+        "cases": "150"
+    },
+    {
+        "zipCode": "96706",
+        "city": "Ewa Beach",
+        "lat": 21.34,
+        "long": -158.01,
+        "cases": "150"
+    },
+    {
+        "zipCode": "96707",
+        "city": "Kapolei",
+        "lat": 21.36,
+        "long": -158.08,
+        "cases": "150"
+    },
+    {
+        "zipCode": "96712",
+        "city": "Haleiwa",
+        "lat": 21.64,
+        "long": -158.05,
+        "cases": "25"
+    },
+    {
+        "zipCode": "96712",
+        "city": "Haleiwa",
+        "lat": 21.64,
+        "long": -158.05,
+        "cases": "25"
+    },
+    {
+        "zipCode": "96717",
+        "city": "Hauula",
+        "lat": 21.57,
+        "long": -157.92,
+        "cases": "25"
+    },
+    {
+        "zipCode": "96730",
+        "city": "Kaaawa",
+        "lat": 21.54,
+        "long": -157.85,
+        "cases": "25"
+    },
+    {
+        "zipCode": "96731",
+        "city": "Kahuku",
+        "lat": 21.67,
+        "long": -157.97,
+        "cases": "25"
+    },
+    {
+        "zipCode": "96734",
+        "city": "Kailua",
+        "lat": 21.4,
+        "long": -157.75,
+        "cases": "51"
+    },
+    {
+        "zipCode": "96734",
+        "city": "Kailua",
+        "lat": 21.4,
+        "long": -157.75,
+        "cases": "51"
+    },
+    {
+        "zipCode": "96782",
+        "city": "Pearl City",
+        "lat": 21.41,
+        "long": -157.95,
+        "cases": "150"
+    },
+    {
+        "zipCode": "96786",
+        "city": "Wahiawa",
+        "lat": 21.53,
+        "long": -158.01,
+        "cases": "51"
+    },
+    {
+        "zipCode": "96789",
+        "city": "Mililani",
+        "lat": 21.46,
+        "long": -157.99,
+        "cases": "51"
+    },
+    {
+        "zipCode": "96792",
+        "city": "Waianae",
+        "lat": 21.5,
+        "long": -158.2,
+        "cases": "150"
+    },
+    {
+        "zipCode": "96814",
+        "city": "Honolulu",
+        "lat": 21.29,
+        "long": -157.85,
+        "cases": "51"
+    },
+    {
+        "zipCode": "96815",
+        "city": "Honolulu",
+        "lat": 21.27,
+        "long": -157.82,
+        "cases": "51"
+    },
+    {
+        "zipCode": "96816",
+        "city": "Honolulu",
+        "lat": 21.3,
+        "long": -157.79,
+        "cases": "150"
+    },
+    {
+        "zipCode": "96817",
+        "city": "Honolulu",
+        "lat": 21.34,
+        "long": -157.84,
+        "cases": "150"
+    },
+    {
+        "zipCode": "96818",
+        "city": "Honolulu",
+        "lat": 21.35,
+        "long": -157.93,
+        "cases": "150"
+    },
+    {
+        "zipCode": "96819",
+        "city": "Honolulu",
+        "lat": 21.35,
+        "long": -157.88,
+        "cases": "150"
+    },
+    {
+        "zipCode": "96821",
+        "city": "Honolulu",
+        "lat": 21.3,
+        "long": -157.75,
+        "cases": "150"
+    },
+    {
+        "zipCode": "96822",
+        "city": "Honolulu",
+        "lat": 21.32,
+        "long": -157.82,
+        "cases": "150"
+    },
+    {
+        "zipCode": "96825",
+        "city": "Honolulu",
+        "lat": 21.29,
+        "long": -157.69,
+        "cases": "150"
+    }
+]

@@ -30,8 +30,8 @@
                             distances.push(calcGeoDistance(position.latitude,position.longitude,mydata[i].lat,mydata[i].long,'mi'));
                         }
                     }   
-                    document.getElementById('text1').innerHTML = mydata[distances.indexOf(Math.min.apply(Math, distances))].city + ", " + mydata[distances.indexOf(Math.min.apply(Math, distances))].zipCode;
-                    document.getElementById('text2').innerHTML = mydata[distances.indexOf(Math.min.apply(Math, distances))].cases;
+                    document.getElementById('text1').innerHTML = "Location: " + mydata[distances.indexOf(Math.min.apply(Math, distances))].city + ", " + mydata[distances.indexOf(Math.min.apply(Math, distances))].zipCode;
+                    document.getElementById('text2').innerHTML = "Cases: " + mydata[distances.indexOf(Math.min.apply(Math, distances))].cases;
                 }
             xmlhttp.open("GET","covidHawaiiData.json",true);
             xmlhttp.send();

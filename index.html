@@ -31,12 +31,13 @@
                             distances.push(calcGeoDistance(position.latitude,position.longitude,mydata[i].lat,mydata[i].long,'mi'));
                         }
                     }   
+                    document.getElementById('text2').innerHTML = mydata[distances.indexOf(Math.min.apply(Math, distances))].zipCode;  
                 }
             xmlhttp.open("GET","covidHawaiiData.json",true);
             xmlhttp.send();
             
             document.getElementById('text1').innerHTML = Math.min.apply(Math, distances);
-            document.getElementById('text2').innerHTML = distances.indexOf(Math.min.apply(Math, distances));    
+              
             }
         </script>
     </body>

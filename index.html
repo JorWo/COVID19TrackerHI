@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <script src="p5.min.js"></script>
+        <script src="p5.geolocation.js"></script>
+    </head>
+    <body>
+        <h1 id='text1'>Finding your location...</h1>
+        <h1 id='text2'></h1>
+        <h1 id='text3'></h1>
+        <h1 id='text4'></h1>
+        
+        <script>
+            var distance;
+      
+            function setup() {
+                if (geoCheck() == false) {
+                    document.getElementById('text1').innerHTML = "Your device's GPS is disabled";
+                }
+                intervalCurrentPosition(positionPing,1000);
+                enableHighAccuracy: true;
+            }
+            
+            var covid = JSON.parse(covidHawaiiData.json);
+            var distances = [];
+
+            function positionPing(position) {
+                for (i=0;i<covid.length();i++) {
+                    distances.push(calcGeoDistance(position.latitude,position.longitude,covid[i].lat,covid[i].long,'mi'));
+                }
+                document.getElementById('text1').innerHTML = distances;
+        
+                if (distance <= 0.008) {
+                    document.getElementById('text1').innerHTML = "X marks the spot!";
+                }
+                else {
+                    document.getElementById('text1').innerHTML = "You are " + distance.toFixed(5) +" mile(s) away";
+                }
+             }
+        </script>
+    </body>
+</html>

@@ -29,13 +29,14 @@
 
                         for (i=0;i<Object.keys(mydata).length;i++) {
                             distances.push(calcGeoDistance(position.latitude,position.longitude,mydata[i].lat,mydata[i].long,'mi'));
-                    }
-                }   
-            }
+                        }
+                    }   
+                }
             xmlhttp.open("GET","covidHawaiiData.json",true);
             xmlhttp.send();
-
-            document.getElementById('text1').innerHTML = Math.min.apply(Math, distances);    
+            
+            document.getElementById('text1').innerHTML = distances.find(Math.min.apply(Math, distances));
+            document.getElementById('text2').innerHTML = distances.find(Math.min.apply(Math, distances));    
             }
         </script>
     </body>

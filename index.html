@@ -32,7 +32,6 @@
                     }   
                     document.getElementById('text1').innerHTML = mydata[distances.indexOf(Math.min.apply(Math, distances))].city + ", " + mydata[distances.indexOf(Math.min.apply(Math, distances))].zipCode;
                     document.getElementById('text2').innerHTML = mydata[distances.indexOf(Math.min.apply(Math, distances))].cases;
-                    document.getElementById('text3').innerHTML = distances;
                 }
             xmlhttp.open("GET","covidHawaiiData.json",true);
             xmlhttp.send();

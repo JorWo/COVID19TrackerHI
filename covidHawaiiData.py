@@ -21,12 +21,12 @@ for i in zipCodes:
     print(SearchEngine(simple_zipcode=True).by_zipcode(i).major_city)
     print(SearchEngine(simple_zipcode=True).by_zipcode(i).lat)
     print(SearchEngine(simple_zipcode=True).by_zipcode(i).lng)
-    print(dataPoints[dataPoints.index(i) + 2])
+    print((dataPoints[dataPoints.index(i) + 2]).replace('150', '>150').replace('51', '51-150').replace('26', '26-50').replace('25','1-25'))
     print()
 
 zipAndCases = []
 for i in zipCodes:
-    zipAndCases.append({"zipCode": i, "city": SearchEngine(simple_zipcode=True).by_zipcode(i).major_city, "lat": SearchEngine(simple_zipcode=True).by_zipcode(i).lat, "long": SearchEngine(simple_zipcode=True).by_zipcode(i).lng, "cases": dataPoints[dataPoints.index(i) + 2]},)
+    zipAndCases.append({"zipCode": i, "city": SearchEngine(simple_zipcode=True).by_zipcode(i).major_city, "lat": SearchEngine(simple_zipcode=True).by_zipcode(i).lat, "long": SearchEngine(simple_zipcode=True).by_zipcode(i).lng, "cases": (dataPoints[dataPoints.index(i) + 2]).replace('150', '>150').replace('51', '51-150').replace('26', '26-50').replace('25','1-25')},)
 
 with open("covidHawaiiData.json", "w") as outfile:
     json.dump(zipAndCases, outfile, indent=4, separators=(",",": "))

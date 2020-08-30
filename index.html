@@ -30,7 +30,7 @@
                     distances.push(calcGeoDistance(position.latitude,position.longitude,covid[i].lat,covid[i].long,'mi'));
                 }
             }
-            
+            }
             document.getElementById('text1').innerHTML = distances;
 
             function positionPing(position) {

@@ -2,12 +2,24 @@
     <head>
         <script src="p5.min.js"></script>
         <script src="p5.geolocation.js"></script>
+        <style>
+            h1 {
+                text-align:center;
+            }
+            div {
+                margin: 0;
+                position: absolute;
+                top: 50%;
+                -ms-transform: translateY(-50%);
+                transform: translateY(-50%);
+            }
+        </style>
     </head>
     <body>
+        <div>
         <h1 id='text1'>Finding your location...</h1>
         <h1 id='text2'></h1>
-        <h1 id='text3'></h1>
-        <h1 id='text4'></h1>
+        </div>
         
         <script>
             var distances = [];
